@@ -1,10 +1,10 @@
-package org.spo.svc2.trx.pgs.m01.handler;
+package org.spo.svc2.trx.pgs.m99.handler;
 
 import org.spo.ifs2.dsl.controller.AbstractHandler;
 import org.spo.ifs2.dsl.controller.DSLConstants.EventType;
 import org.spo.ifs2.dsl.controller.NavEvent;
-import org.spo.svc2.trx.pgs.m01.task.M0101;
-import org.spo.svc2.trx.pgs.m01.task.M0102;
+import org.spo.svc2.trx.pgs.m99.task.M9901;
+import org.spo.svc2.trx.pgs.m99.task.M9902;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,10 +14,10 @@ public class M01Handler extends AbstractHandler{
 
    
    @Autowired
-   M0101 m0101;
+   M9901 m9901;
    
    @Autowired
-   M0102 m0102;
+   M9902 m9902;
    
   public static final NavEvent EV_INIT_01 =  NavEvent.create(EventType.REFRESHPAGE);
   public static final NavEvent EV_INIT_02 =  NavEvent.create(EventType.REFRESHPAGE);//loads m01/M0102
@@ -26,8 +26,8 @@ public class M01Handler extends AbstractHandler{
   
    @Override
    public void configureChannel() {
-			taskChannel.put("01",m0101);
-			taskChannel.put("02",m0102);
+			taskChannel.put("01",m9901);
+			taskChannel.put("02",m9902);
    }
    
    

@@ -10,7 +10,7 @@ import org.spo.ifs2.dsl.controller.NavEvent;
 import org.spo.ifs2.dsl.controller.TrxInfo;
 import org.spo.ifs2.dsl.model.AbstractTask;
 import org.spo.ifs2.template.web.Constants;
-import org.spo.svc2.trx.pgs.m01.cmd.LA01T;
+import org.spo.svc2.trx.pgs.m99.cmd.LA01T;
 import org.spo.svc2.trxdemo.pgs.c01.cmd.CA01T;
 import org.spo.svc2.trxdemo.pgs.c01.handler.C01Handler;
 import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;

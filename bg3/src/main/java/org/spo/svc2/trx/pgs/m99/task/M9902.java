@@ -1,4 +1,4 @@
-package org.spo.svc2.trx.pgs.m01.task;
+package org.spo.svc2.trx.pgs.m99.task;
 
 import java.lang.reflect.Type;
 
@@ -7,8 +7,8 @@ import org.spo.ifs2.dsl.controller.NavEvent;
 import org.spo.ifs2.dsl.controller.TrxInfo;
 import org.spo.ifs2.dsl.model.AbstractTask;
 import org.spo.ifs2.template.web.Constants;
-import org.spo.svc2.trx.pgs.m01.cmd.LA01T;
-import org.spo.svc2.trx.pgs.m01.handler.M01Handler;
+import org.spo.svc2.trx.pgs.m99.cmd.LA01T;
+import org.spo.svc2.trx.pgs.m99.handler.M01Handler;
 import org.spo.svc2.trxdemo.pgs.c01.cmd.CA01T;
 import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 @Component
-public class M0102 extends AbstractTask {
+public class M9902 extends AbstractTask {
 
 	@Override
 	public NavEvent initView(TrxInfo info) {

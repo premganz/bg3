@@ -70,7 +70,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
     public ServletContextTemplateResolver thymeleafTemplateResolver() {
         ServletContextTemplateResolver resolver =
                 new ServletContextTemplateResolver();
-        resolver.setPrefix("/WEB-INF/site2/");
+        resolver.setPrefix("/WEB-INF/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML5");
         resolver.setCacheable(true);

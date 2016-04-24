@@ -1,4 +1,4 @@
-package org.spo.svc2.trx.pgs.m01.cmd;
+package org.spo.svc2.trx.pgs.m99.cmd;
 
 import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;
 
