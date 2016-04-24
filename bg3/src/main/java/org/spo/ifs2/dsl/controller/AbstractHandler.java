@@ -70,7 +70,7 @@ public abstract class AbstractHandler {
 			info.getState().lastEvent=navevent1;
 			if(navevent1.getEventType().equals(EventType.REFRESHPAGE)){
 				String taskName = taskChannel.get(navevent.getTaskId()).getClass().getSimpleName();				
-				return taskName;
+				return +"site1/"+taskName;
 			}
 		}else if(navevent.getEventType().equals(EventType.TRXSWITCH)){
 			info.getState().trxId=navevent.getTrxId();
