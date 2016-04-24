@@ -11,7 +11,7 @@ import org.spo.ifs2.dsl.controller.TrxInfo;
 import org.spo.ifs2.dsl.model.AbstractTask;
 import org.spo.ifs2.template.web.Constants;
 import org.spo.svc2.trx.pgs.m99.cmd.LA01T;
-import org.spo.svc2.trx.pgs.m99.handler.M01Handler;
+import org.spo.svc2.trx.pgs.m99.handler.M99Handler;
 import org.spo.svc2.trxdemo.pgs.c01.cmd.CA01T;
 import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,28 +78,28 @@ public class M9901 extends AbstractTask {
 			e.printStackTrace();
 		}
 
-		return M01Handler.EV_INIT_01;
+		return M99Handler.EV_INIT_01;
 	}
 
 	@Override
 	public NavEvent processViewEvent(String event, TrxInfo info) {
 		if(event.startsWith("EV_DTL")){
 			String dataId = event.replaceAll("EV_DTL_","");
-			NavEvent navEvent = M01Handler.EV_SWITCH_TO_CONTENT;
+			NavEvent navEvent = M99Handler.EV_SWITCH_TO_CONTENT;
 			navEvent.dataId=dataId;
 			return navEvent;
 		}
 		else if(event.startsWith("EV_ABOUT")){			
-			NavEvent navEvent = M01Handler.EV_SWITCH_TO_CONTENT;
+			NavEvent navEvent = M99Handler.EV_SWITCH_TO_CONTENT;
 			navEvent.dataId="B01T";
 			return navEvent;
 		}
 		else if(event.startsWith("EV_BLOG")){		
-			NavEvent navEvent = M01Handler.EV_SWITCH_TO_BLOG_LANDING;
+			NavEvent navEvent = M99Handler.EV_SWITCH_TO_BLOG_LANDING;
 			navEvent.dataId="LB01T";
 			return navEvent;
 		}
-		return M01Handler.EV_INIT_01;
+		return M99Handler.EV_INIT_01;
 	}
 
 	@Override

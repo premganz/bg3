@@ -8,7 +8,7 @@ import org.spo.ifs2.dsl.controller.TrxInfo;
 import org.spo.ifs2.dsl.model.AbstractTask;
 import org.spo.ifs2.template.web.Constants;
 import org.spo.svc2.trx.pgs.m99.cmd.LA01T;
-import org.spo.svc2.trx.pgs.m99.handler.M01Handler;
+import org.spo.svc2.trx.pgs.m99.handler.M99Handler;
 import org.spo.svc2.trxdemo.pgs.c01.cmd.CA01T;
 import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;
 import org.springframework.stereotype.Component;
@@ -70,7 +70,7 @@ public class M9902 extends AbstractTask {
 			e.printStackTrace();
 		}
 
-		return M01Handler.EV_INIT_02;
+		return M99Handler.EV_INIT_02;
 	
 	}
 
