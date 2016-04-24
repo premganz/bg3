@@ -2,7 +2,7 @@ package org.spo.svc3.trx.def;
 
 import org.spo.ifs3.template.web.Constants;
 import org.springframework.stereotype.Component;
-@Component
+//@Component
 public class ConstantsImpl implements Constants {
 
 	public String getRepoPath() {
@@ -14,7 +14,7 @@ public class ConstantsImpl implements Constants {
 	}
 
 	public String getLandingPage() {
-		return "trx/W01/LA01T";
+		return "trx/M01/LA01T";
 	}
 
 	public int getPortNumber() {
