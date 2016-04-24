@@ -64,7 +64,7 @@ public abstract class AbstractHandler {
 
 		if(navevent.getEventType().equals(EventType.REFRESHPAGE)){
 			String taskName = taskChannel.get("01").getClass().getSimpleName();				
-			return taskName;
+				return "site2/"+taskName;
 		}else if(navevent.getEventType().equals(EventType.TASKSET)){			
 			NavEvent navevent1=handleInBound(navevent, info);
 			info.getState().lastEvent=navevent1;
