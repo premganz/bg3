@@ -1,5 +1,7 @@
 package org.spo.cms3.controller;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -37,7 +39,9 @@ public class CMSContentPageController {
 		 PostContent content1 = new PostContent();
 		 content1.setHtmlContent("hello");
 		 model.addAttribute("content", content1);
-
+		 List<String> list = svc.readFileCatalog("posts");
+		 Collections.sort(list);		 
+		 model.addAttribute("files",list);
 		 return "site2/x_content";
 	 }
 	 
@@ -46,7 +50,9 @@ public class CMSContentPageController {
 		 PostContent content1 = new PostContent();
 		 content1.setHtmlContent("hello");
 		 model.addAttribute("content", content1);
-
+		 List<String> list = svc.readFileCatalog("templates");
+		 Collections.sort(list);		 
+		 model.addAttribute("files",list);
 		 return "site2/y_content";
 	 }
 	 
