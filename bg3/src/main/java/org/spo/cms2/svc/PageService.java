@@ -188,7 +188,14 @@ boolean testMode=false;
 
 
 
-	
+	public Constants getConstants() {
+		return constants;
+	}
+
+
+	public void setConstants(Constants constants) {
+		this.constants = constants;
+	}	
 	
 	
 	
