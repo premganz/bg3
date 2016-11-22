@@ -2,7 +2,7 @@ package org.spo.svc3.trxdemo1.def;
 
 import org.spo.ifs3.template.web.Constants;
 import org.springframework.stereotype.Component;
-//@Component
+@Component
 public class ConstantsTestImpl implements Constants {
 
 	public String getRepoPath() {
