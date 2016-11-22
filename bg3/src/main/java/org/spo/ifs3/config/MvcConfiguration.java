@@ -30,8 +30,8 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 @Configuration
 @ComponentScan(useDefaultFilters = false, basePackages = {
 		
-		"org.spo.svc3.trx",
-		"org.spo.svc3.trx.pgs",
+		"org.spo.svc3.trxdemo1",
+		"org.spo.svc3.trxdemo1.pgs",
 		"org.spo.ifs3.dsl.controller",
 		"org.spo.cms3.controller"
 		},
