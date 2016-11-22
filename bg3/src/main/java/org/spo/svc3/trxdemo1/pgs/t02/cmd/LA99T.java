@@ -1,16 +1,16 @@
-package org.spo.svc3.trx.pgs.m99.cmd;
+package org.spo.svc3.trxdemo1.pgs.t02.cmd;
 
-import org.spo.cms2.controller.PostContent;
+import org.spo.cms3.controller.PostContent;
 
 
 
-public class LA01T
+public class LA99T
 {
-	private MENU_LINKS_AUDIENCE_ZN[] MENU_LINKS_AUDIENCE_ZN;
+	private MENU_LINKS_BLOGS_ZN[] MENU_LINKS_BLOGS_ZN;
 
 	private MENU_LINKS_IDEA_ZN[] MENU_LINKS_IDEA_ZN;
 
-	private MENU_LINKS_INVOLVED_ZN[] MENU_LINKS_INVOLVED_ZN;
+	private MENU_LINKS_META_ZN[] MENU_LINKS_META_ZN;
 
 	private String about_link_ref;
 
@@ -20,14 +20,14 @@ public class LA01T
 
 	private String list_pagination_ic;
 
-	public MENU_LINKS_AUDIENCE_ZN[] getMENU_LINKS_AUDIENCE_ZN ()
+	public MENU_LINKS_BLOGS_ZN[] getMENU_LINKS_BLOGS_ZN ()
 	{
-		return MENU_LINKS_AUDIENCE_ZN;
+		return MENU_LINKS_BLOGS_ZN;
 	}
 
-	public void setMENU_LINKS_AUDIENCE_ZN (MENU_LINKS_AUDIENCE_ZN[] MENU_LINKS_AUDIENCE_ZN)
+	public void setMENU_LINKS_BLOGS_ZN (MENU_LINKS_BLOGS_ZN[] MENU_LINKS_BLOGS_ZN)
 	{
-		this.MENU_LINKS_AUDIENCE_ZN = MENU_LINKS_AUDIENCE_ZN;
+		this.MENU_LINKS_BLOGS_ZN = MENU_LINKS_BLOGS_ZN;
 	}
 
 	public MENU_LINKS_IDEA_ZN[] getMENU_LINKS_IDEA_ZN ()
@@ -40,14 +40,14 @@ public class LA01T
 		this.MENU_LINKS_IDEA_ZN = MENU_LINKS_IDEA_ZN;
 	}
 
-	public MENU_LINKS_INVOLVED_ZN[] getMENU_LINKS_INVOLVED_ZN ()
+	public MENU_LINKS_META_ZN[] getMENU_LINKS_META_ZN ()
 	{
-		return MENU_LINKS_INVOLVED_ZN;
+		return MENU_LINKS_META_ZN;
 	}
 
-	public void setMENU_LINKS_INVOLVED_ZN (MENU_LINKS_INVOLVED_ZN[] MENU_LINKS_INVOLVED_ZN)
+	public void setMENU_LINKS_META_ZN (MENU_LINKS_META_ZN[] MENU_LINKS_META_ZN)
 	{
-		this.MENU_LINKS_INVOLVED_ZN = MENU_LINKS_INVOLVED_ZN;
+		this.MENU_LINKS_META_ZN = MENU_LINKS_META_ZN;
 	}
 
 	public String getAbout_link_ref ()
@@ -93,7 +93,7 @@ public class LA01T
 	@Override
 	public String toString()
 	{
-		return "ClassPojo [MENU_LINKS_AUDIENCE_ZN = "+MENU_LINKS_AUDIENCE_ZN+", MENU_LINKS_IDEA_ZN = "+MENU_LINKS_IDEA_ZN+", MENU_LINKS_INVOLVED_ZN = "+MENU_LINKS_INVOLVED_ZN+", about_link_ref = "+about_link_ref+", home_link_ref = "+home_link_ref+", MENU_LINKS_RESOURCES_ZN = "+MENU_LINKS_RESOURCES_ZN+", list_pagination_ic = "+list_pagination_ic+"]";
+		return "ClassPojo [MENU_LINKS_BLOGS_ZN = "+MENU_LINKS_BLOGS_ZN+", MENU_LINKS_IDEA_ZN = "+MENU_LINKS_IDEA_ZN+", MENU_LINKS_META_ZN = "+MENU_LINKS_META_ZN+", about_link_ref = "+about_link_ref+", home_link_ref = "+home_link_ref+", MENU_LINKS_RESOURCES_ZN = "+MENU_LINKS_RESOURCES_ZN+", list_pagination_ic = "+list_pagination_ic+"]";
 	}
 	/**Added seperately**/
 	private PostContent contentObject;
@@ -150,7 +150,7 @@ class MENU_LINKS_RESOURCES_ZN
 	}
 }
 
-class MENU_LINKS_INVOLVED_ZN
+class MENU_LINKS_META_ZN
 {
 	private MENU_SUBLINKS_ZN[] MENU_SUBLINKS_ZN;
 
@@ -228,7 +228,7 @@ class MENU_SUBLINKS_ZN
 	}
 }
 
-class MENU_LINKS_AUDIENCE_ZN
+class MENU_LINKS_BLOGS_ZN
 {
 	private MENU_SUBLINKS_ZN[] MENU_SUBLINKS_ZN;
 

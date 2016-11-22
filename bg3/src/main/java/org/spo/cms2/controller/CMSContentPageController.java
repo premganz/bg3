@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.spo.cms2.model.QMessage;
 import org.spo.cms2.svc.PageService;
 import org.spo.cms2.svc.SocketConnector;
-import org.spo.svc2.trxdemo.pgs.mc.cmd.PostContent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -120,7 +119,7 @@ public class CMSContentPageController {
 					//TextMessage reply = sender.simpleSend(message.toString()); 
 					//response=reply.getText();
 					content.setHtmlContent(response);
-					content.setMeta(response_meta);
+					//content.setMeta(response_meta);
 				} catch (Exception e) {			
 					e.printStackTrace();
 				}
