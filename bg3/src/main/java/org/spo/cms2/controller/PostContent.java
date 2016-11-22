@@ -47,16 +47,17 @@ public class PostContent {
 	}
 
 	public void setMeta(String meta) {
-		this.meta = meta;metaMap=new LinkedHashMap<String,String>();
-		try{
-			String[] metaArr = meta.split(";");
-			for(String expr:metaArr){	
-				metaMap.put(expr.split("=")[0],expr.split("=")[1]);
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-			throw new CMSValidationException();
-		}
+		this.meta = meta;
+//		metaMap=new LinkedHashMap<String,String>();
+//		try{
+//			String[] metaArr = meta.split(";");
+//			for(String expr:metaArr){	
+//				metaMap.put(expr.split("=")[0],expr.split("=")[1]);
+//			}
+//		}catch(Exception e){
+//			e.printStackTrace();
+//			throw new CMSValidationException();
+//		}
 	}
 
 	public String getHtmlContent() {
