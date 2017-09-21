@@ -134,7 +134,7 @@ public class DelegatingController{
 	private AbstractHandler resolveHanlder(String trxId){
 		AbstractHandler concernedHandler=null;
 		try {
-			concernedHandler = (AbstractHandler)appContext.getBean(Class.forName("org.spo.svc3.trxdemo1.pgs."+trxId.toLowerCase()+ ".handler."+trxId+"Handler"));
+			concernedHandler = (AbstractHandler)appContext.getBean(Class.forName("org.spo.svc3.trx.pgs."+trxId.toLowerCase()+ ".handler."+trxId+"Handler"));
 		} catch (BeansException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();			

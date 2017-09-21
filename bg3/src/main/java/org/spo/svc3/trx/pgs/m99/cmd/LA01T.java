@@ -1,6 +1,6 @@
 package org.spo.svc3.trx.pgs.m99.cmd;
 
-import org.spo.cms2.controller.PostContent;
+import org.spo.svc3.trxdemo.pgs.mc.cmd.PostContent;
 
 
 

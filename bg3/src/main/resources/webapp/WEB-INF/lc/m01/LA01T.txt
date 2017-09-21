@@ -1,182 +1,80 @@
 {
-	"home_link_ref": "/",
-	"about_link_ref": "?event=EV_ABOUT",
+	"home_link_ref": "More on this",
+	"about_link_ref": "More on this",
 	"MENU_LINKS_IDEA_ZN": [
 		{
+			
 			"link_title": "Liberal Education",
 			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "C01T",
-					"link_href": "?event=EV_DTL_C01T",
-					"link_title": "What is Liberal Education"
-				},
-				{
-					"link_id": "C03T",
-					"link_href": "?event=EV_DTL_C03T",
-					"link_title": "More in Depth"
-				},
-				{
-					"link_id": "C04T",
-					"link_href": "?event=EV_DTL_C04T",
-					"link_title": "A case for India"
-				},
-				{
-					"link_id": "C02T",
-					"link_href": "?event=EV_DTL_C02T",
-					"link_title": "A Working Model"
-				}
-			]
+					{
+						"link_id": "C01",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "What is Liberal Education"			
+					},
+					{
+						"link_id": "C02",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "More In Depth"			
+					}
+				]			
+		
+		}
+	],
+	"MENU_LINKS_AUDIENCE_ZN": [
+		{
+			
+			"link_title": "Liberal Education",
+			"MENU_SUBLINKS_ZN": [
+					{
+						"link_id": "C01",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "What is Liberal Education"			
+					},
+					{
+						"link_id": "C02",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "More In Depth"			
+					}
+				]			
+		
+		}
+	],
+	"MENU_LINKS_INVOLVED_ZN": [
+		{
+			
+			"link_title": "Liberal Education",
+			"MENU_SUBLINKS_ZN": [
+					{
+						"link_id": "C01",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "What is Liberal Education"			
+					},
+					{
+						"link_id": "C02",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "More In Depth"			
+					}
+				]			
+		
 		}
 	],
 	"MENU_LINKS_RESOURCES_ZN": [
 		{
-			"link_title": "Schools",
+			
+			"link_title": "Liberal Education",
 			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "E01T",
-					"link_href": "?event=EV_DTL_E01T",
-					"link_title": "Why Liberal Education"
-				},
-				{
-					"link_id": "E02T1",
-					"link_href": "?event=EV_DTL_E02T1",
-					"link_title": "Social Dimension"
-				},
-				{
-					"link_id": "E02T",
-					"link_href": "?event=EV_DTL_E02T",
-					"link_title": "Balancing Priorities"
-				},
-				{
-					"link_id": "E03T",
-					"link_href": "?event=EV_DTL_E03T",
-					"link_title": "Stakeholders"
-				},
-				{
-					"link_id": "E04T",
-					"link_href": "?event=EV_DTL_E04T",
-					"link_title": "Adaptation Strategies"
-				}
-			]
-		},
-		{
-			"link_title": "Students",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "D01T",
-					"link_href": "?event=EV_DTL_D01T",
-					"link_title": "How it Helps"
-				},
-				{
-					"link_id": "D02T",
-					"link_href": "event=EV_DTL_D02T",
-					"link_title": "Whom to Ask"
-				}
-			]
-		},
-		{
-			"link_title": "Parents",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "C03T",
-					"link_href": "event=EV_DTL_C03T",
-					"link_title": "A Primer"
-				},
-				{
-					"link_id": "C03T",
-					"link_href": "event=EV_DTL_C03T",
-					"link_title": "Concerns and Hopes"
-				},
-				{
-					"link_id": "D02T",
-					"link_href": "event=EV_DTL_C04T",
-					"link_title": "How to Support"
-				}
-			]
-		}
-	],
-	"MENU_LINKS_BLOGS_ZN": [
-		{
-			"link_title": "Resources",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "E01T",
-					"link_href": "?event=EV_BLOG",
-					"link_title": "Blogs"
-				},
-				{
-					"link_id": "E02T1",
-					"link_href": "?event=EV_D03T",
-					"link_title": "Student Videos"
-				},
-				{
-					"link_id": "E05T",
-					"link_href": "?event=EV_DTL_E05T",
-					"link_title": "For Teachers"
-				},
-				{
-					"link_id": "E05T",
-					"link_href": "?event=EV_ADMIN",
-					"link_title": "Login"
-				}
-			]
-		},
-		{
-			"link_title": "Students",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "D01T",
-					"link_href": "?event=EV_DTL_D01T",
-					"link_title": "How it Helps"
-				},
-				{
-					"link_id": "D02T",
-					"link_href": "?event=EV_DTL_D02T",
-					"link_title": "Whom to Ask"
-				}
-			]
-		},
-		{
-			"link_title": "Parents",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "C03T",
-					"link_href": "?event=EV_DTL_C03T",
-					"link_title": "A Primer"
-				},
-				{
-					"link_id": "C03T",
-					"link_href": "?event=EV_DTL_C03T",
-					"link_title": "Concerns and Hopes"
-				},
-				{
-					"link_id": "D02T",
-					"link_href": "?event=EV_DTL_C04T",
-					"link_title": "How to Support"
-				}
-			]
-		}
-	],
-	"MENU_LINKS_META_ZN": [
-		{
-			"link_title": "Users",
-			"MENU_SUBLINKS_ZN": [
-				{
-					"link_id": "D01",
-					"link_href": "?event=EV_DTL_D03T",
-					"link_title": "Feedback"
-				},
-				{
-					"link_id": "C02",
-					"link_href": "../trx/C01/C01T",
-					"link_title": "Enroll"
-				},
-				{
-					"link_id": "C02",
-					"link_href": "../trx/C01/C01T",
-					"link_title": "Enroll"
-				}
-			]
+					{
+						"link_id": "C01",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "What is Liberal Education"			
+					},
+					{
+						"link_id": "C02",
+						"link_href": "../trx/C01/C01T",
+						"link_title": "More In Depth"			
+					}
+				]			
+		
 		}
 	],
 	"list_pagination_ic": "1"
