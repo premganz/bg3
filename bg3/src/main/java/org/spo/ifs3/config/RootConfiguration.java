@@ -22,11 +22,11 @@ import org.springframework.stereotype.Controller;
 //@ImportResource({"classpath:META-INF/spring/root-context.xml"})
 @ComponentScan(basePackages = {"org.spo.ifs3.config", 
 		"org.spo.ifs3.template",	
-		"org.spo.svc3.trxdemo1",
-		"org.spo.svc3.trxdemo1.pgs",
+		"org.spo.svc3.trx",
+		
 		"org.spo.ifs3.dsl.model",
-		"org.spo.ifs3.template.web",
-		"org.spo.svc3.trxdemo1.def",
+		
+		
 		"org.spo.cms3.svc"
 		},
         excludeFilters = {@ComponentScan.Filter(Controller.class),

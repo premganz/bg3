@@ -1,9 +1,6 @@
 package org.spo.cms3.controller;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
-
-import org.spo.cms2.svc.CMSValidationException;
 
 public class PostContent {
 

@@ -2,7 +2,6 @@ package org.spo.ifs.template;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.spo.ifs2.config.RootConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -30,32 +29,32 @@ public class Main {
         final Logger logger = LoggerFactory.getLogger("main");
 
         try {
-            AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-
-            /*
-             * One problem with SpringMVC is it creates its own application
-             * context, and so it can end up failing but our application will
-             * keep running.
-             * 
-             * To detect the case where the SpringMVC's web application context
-             * fails we'll listen for ContextRefreshEvents and set a flag when
-             * we see one.
-             */
-            applicationContext
-                    .addApplicationListener(new ApplicationListener<ContextRefreshedEvent>() {
-                       
-                        public void onApplicationEvent(
-                                ContextRefreshedEvent event) {
-                            ApplicationContext ctx = event.getApplicationContext();
-                            if (ctx instanceof AnnotationConfigWebApplicationContext) {
-                                webApplicationContextInitialized = true;
-                            }
-                        }
-                    });
-
-            applicationContext.registerShutdownHook();
-            applicationContext.register(RootConfiguration.class);
-            applicationContext.refresh();
+//            AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+//
+//            /*
+//             * One problem with SpringMVC is it creates its own application
+//             * context, and so it can end up failing but our application will
+//             * keep running.
+//             * 
+//             * To detect the case where the SpringMVC's web application context
+//             * fails we'll listen for ContextRefreshEvents and set a flag when
+//             * we see one.
+//             */
+//            applicationContext
+//                    .addApplicationListener(new ApplicationListener<ContextRefreshedEvent>() {
+//                       
+//                        public void onApplicationEvent(
+//                                ContextRefreshedEvent event) {
+//                            ApplicationContext ctx = event.getApplicationContext();
+//                            if (ctx instanceof AnnotationConfigWebApplicationContext) {
+//                                webApplicationContextInitialized = true;
+//                            }
+//                        }
+//                    });
+//
+//            applicationContext.registerShutdownHook();
+//            applicationContext.register(RootConfiguration.class);
+//            applicationContext.refresh();
          
             /*In case you want to start a  second container and jetty instance on a seperate port
              * All you need to do is to uncommment the part below, create a new folder called ifs3 and copy the entire ifs2 into it, 

@@ -3,7 +3,7 @@ package org.spo.ifs3.dsl.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.spo.ifs2.dsl.model.AbstractTask;
+import org.spo.ifs3.dsl.model.AbstractTask;
 
 public class EventChain {
 
