@@ -37,7 +37,7 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 		},
         includeFilters = {@ComponentScan.Filter(Controller.class)})
 
-public class MvcConfiguration extends WebMvcConfigurerAdapter {
+public class MvcConfiguration2 extends WebMvcConfigurerAdapter {
 
     final Logger logger = LoggerFactory.getLogger(getClass());
 
