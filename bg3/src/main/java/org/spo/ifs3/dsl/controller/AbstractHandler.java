@@ -19,7 +19,7 @@ public abstract class AbstractHandler {
 	 * 
 	 * Use a Syntax to define states and transitions like
 	 * 
-	 * T0201->M0102|switch 
+	 * M0101->M0102|switch 
 	 * eventChain.setGroundState(m01).addEvent("switch").addState(m02)
 	 * 
 	 * 
