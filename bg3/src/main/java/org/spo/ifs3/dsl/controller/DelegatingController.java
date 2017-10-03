@@ -1,5 +1,6 @@
 package org.spo.ifs3.dsl.controller;
 
+import java.util.LinkedHashMap;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +31,7 @@ public class DelegatingController{
 	private ApplicationContext appContext;
 	@Autowired
 	Constants constants;
-	protected static ScopeVar scopeVarForm = new ScopeVar(Scope.REQ, "form"); 
+ 
 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
@@ -67,9 +68,9 @@ public class DelegatingController{
 		return handler.handle1(pageEvent,dataId,state,info,request);
 	}
 	
-	@RequestMapping(value="/trx/{trxId}/formSubmit", method = RequestMethod.POST)
-	 public String submitContact(final Object form, HttpServletRequest request,
-			 final BindingResult bindingResult, HttpSession session,
+	@RequestMapping(value="/trx/{trxId}/FORM", method = RequestMethod.POST)
+	 public String submitContact(final Forms form, 
+			 final BindingResult bindingResult, HttpSession session,HttpServletRequest request,
 			 @PathVariable String trxId)			
 				 {		
 		TrxInfo info = (TrxInfo)session.getAttribute("info");
@@ -78,9 +79,9 @@ public class DelegatingController{
 			 return "seedstartermng";
 		 }
 		 info = (TrxInfo)session.getAttribute("info");
-		 info.put(scopeVarForm,bindingResult.getTarget());
+		 info.put(AbstractToolkit.SV_FORM,form.getForm());
 		 AbstractHandler handler = resolveHanlder(trxId);
-		 return handler.handle2(state,info,request,form);
+		 return handler.handle2(state,info,request);
 	 }
 
 

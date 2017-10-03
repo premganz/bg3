@@ -1,12 +1,24 @@
 package org.spo.ifs3.dsl.controller;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Forms {
 
+private Map<String,String> form = new LinkedHashMap<String,String>();
 
-	}
+public Map<String, String> getForm() {
+	return form;
+}
+
+public void setForm(Map<String, String> form) {
+	this.form = form;
+}
+
+
+
+
+}
 	
 	
 

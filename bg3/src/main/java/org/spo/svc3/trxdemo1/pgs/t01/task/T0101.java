@@ -78,7 +78,7 @@ public class T0101 extends AbstractTask {
 	}
 
 	@Override
-	public NavEvent processViewResult(String event, Object form, TrxInfo info) {
+	public NavEvent processViewResult(String event, String json, TrxInfo info) {
 		// TODO Auto-generated method stub
 		return null;
 	}

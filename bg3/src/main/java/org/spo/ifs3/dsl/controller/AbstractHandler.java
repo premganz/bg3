@@ -1,5 +1,6 @@
 package org.spo.ifs3.dsl.controller;
 
+import java.lang.reflect.Type;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -8,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.spo.ifs3.dsl.controller.DSLConstants.EventType;
 import org.spo.ifs3.dsl.controller.TrxInfo.Scope;
 import org.spo.ifs3.dsl.model.AbstractTask;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public abstract class AbstractHandler {
 
@@ -44,12 +48,19 @@ public abstract class AbstractHandler {
 			navevent=taskChannel.get("01").initTask(navevent.dataId, info);
 
 		}
-		if(navevent.getEventType().equals(EventType.FORMSUBMIT)){			
-			navevent=taskChannel.get(info.getState().taskId).processViewResult(navevent.dataId, info.get(DelegatingController.scopeVarForm),info);
+		if(navevent.getEventType().equals(EventType.FORMSUBMIT)){		
+			Map<String,String> map= (Map<String,String>)info.get(AbstractToolkit.SV_FORM);
+			Gson gson = new Gson();
+			Type typ1 = new TypeToken<Map<String, String>>(){}.getType();
+			String json = gson.toJson(map,typ1);
+			
+			
+			
+			navevent=taskChannel.get(info.getState().taskId).processViewResult(navevent.dataId, json,info);
 
 		}
 		if(navevent.getEventType().equals(EventType.TASKSET)){
-			navevent=taskChannel.get(info.getState().taskId).initTask(navevent.dataId, info);
+			navevent=taskChannel.get(navevent.getTaskId()).initTask(navevent.dataId, info);
 		}
 		if(navevent.getEventType().equals(EventType.PROCESSEVENT)){
 			navevent=taskChannel.get(info.getState().taskId).processViewEvent(navevent.getEventId(), info);
@@ -67,7 +78,7 @@ public abstract class AbstractHandler {
 
 
 		if(navevent.getEventType().equals(EventType.REFRESHPAGE)){
-			String taskName = taskChannel.get("01").getClass().getSimpleName();				
+			String taskName = taskChannel.get(info.getState().taskId).getClass().getSimpleName();				
 			return "site2/"+taskName;
 		}else if(navevent.getEventType().equals(EventType.TASKSET)){			
 			NavEvent navevent1=handleInBound(navevent, info);
@@ -115,7 +126,7 @@ public abstract class AbstractHandler {
 		}
 		return "";	
 	}
-	public String  handle2(StateInfo state, TrxInfo info, HttpServletRequest request, Object form){
+	public String  handle2(StateInfo state, TrxInfo info, HttpServletRequest request){
 		try{			
 			
 				NavEvent navevent=new NavEvent(EventType.FORMSUBMIT,state.trxId,state.taskId,"FORMSUBMIT","");
