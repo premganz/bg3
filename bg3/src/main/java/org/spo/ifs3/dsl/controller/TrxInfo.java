@@ -49,10 +49,14 @@ public class TrxInfo {
 		session.setAttribute("info_req", info_req);
 		
 	}
-	
+	public void updateModelMap(ModelMap map){
+		info_req.put(AbstractToolkit.SV_MODEL, map);
+		
+	}
 
 	public void addToModelMap(String key, Object value){
 		((ModelMap)info_req.get(AbstractToolkit.SV_MODEL)).addAttribute(key, value);
+		
 	}
 	public StateInfo getState(){
 		return ((StateInfo)info_trx.get(AbstractToolkit.SV_STATE));
