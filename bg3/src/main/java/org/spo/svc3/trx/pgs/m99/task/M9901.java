@@ -47,6 +47,12 @@ public class M9901 extends AbstractTask {
 		}
 		return M99Handler.EV_INIT_01;
 	}
+	
+	@Override
+	public NavEvent processViewResult(String event, Object form, TrxInfo info) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public String processAjaxEvent(String event, TrxInfo info) {

@@ -25,6 +25,12 @@ public class M9902 extends AbstractTask {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public NavEvent processViewResult(String event,Object form,  TrxInfo info) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public String processAjaxEvent(String event, TrxInfo info) {

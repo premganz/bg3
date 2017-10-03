@@ -10,7 +10,7 @@ public abstract class AbstractTask {
 	//public abstract NavEvent initView(String dataId, ModelMap info);
 	public abstract NavEvent processViewEvent(String event, TrxInfo info);	
 	public abstract String processAjaxEvent(String event, TrxInfo info);
-	
+	public abstract NavEvent processViewResult(String event, Object form, TrxInfo info);
 	
 	
 	

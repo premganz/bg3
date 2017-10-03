@@ -7,7 +7,7 @@
 	<artifactId>bg3</artifactId>
 	<name>bg3</name>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>b1.6.2</version>
 
 	<properties>
 

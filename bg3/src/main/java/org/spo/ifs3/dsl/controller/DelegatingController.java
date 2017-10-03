@@ -15,6 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,15 +25,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class DelegatingController{
 
-
-
-
-
 	protected static final Logger logger = LoggerFactory.getLogger(AbstractHandler.class);
 	@Autowired
 	private ApplicationContext appContext;
 	@Autowired
 	Constants constants;
+	protected static ScopeVar scopeVarForm = new ScopeVar(Scope.REQ, "form"); 
 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
@@ -68,6 +66,23 @@ public class DelegatingController{
 		AbstractHandler handler = resolveHanlder(trxId);
 		return handler.handle1(pageEvent,dataId,state,info,request);
 	}
+	
+	@RequestMapping(value="/trx/{trxId}/formSubmit", method = RequestMethod.POST)
+	 public String submitContact(final Object form, HttpServletRequest request,
+			 final BindingResult bindingResult, HttpSession session,
+			 @PathVariable String trxId)			
+				 {		
+		TrxInfo info = (TrxInfo)session.getAttribute("info");
+		StateInfo state=info.getState();
+		 if (bindingResult.hasErrors()) {
+			 return "seedstartermng";
+		 }
+		 info = (TrxInfo)session.getAttribute("info");
+		 info.put(scopeVarForm,bindingResult.getTarget());
+		 AbstractHandler handler = resolveHanlder(trxId);
+		 return handler.handle2(state,info,request,form);
+	 }
+
 
 
 	//	@RequestMapping(value="/trx1/{trxId}/{dataId}", method = RequestMethod.GET)
