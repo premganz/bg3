@@ -1,3 +1,4 @@
+
 package org.spo.ifs3.dsl.controller;
 
 import java.util.LinkedHashMap;
@@ -42,10 +43,6 @@ public abstract class AbstractHandler {
 			info.getState().dataId=navevent.dataId;
 			info.getState().eventId="";
 			navevent=taskChannel.get("01").initTask(navevent.dataId, info);
-
-		}
-		if(navevent.getEventType().equals(EventType.FORMSUBMIT)){			
-			navevent=taskChannel.get(info.getState().taskId).processViewResult(navevent.dataId, info.get(DelegatingController.scopeVarForm),info);
 
 		}
 		if(navevent.getEventType().equals(EventType.TASKSET)){
@@ -115,22 +112,7 @@ public abstract class AbstractHandler {
 		}
 		return "";	
 	}
-	public String  handle2(StateInfo state, TrxInfo info, HttpServletRequest request, Object form){
-		try{			
-			
-				NavEvent navevent=new NavEvent(EventType.FORMSUBMIT,state.trxId,state.taskId,"FORMSUBMIT","");
-				NavEvent returnEvent= handleInBound(navevent, info);
 
-			
-				return handleOutBound(returnEvent,request,info);
-
-			
-
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		return "";	
-	}
 	// trxid/taskid/eventid/dataid
 	//	public String  handle(String pageEvent, String event, StateInfo state, TrxInfo info, HttpServletRequest request){
 	//		configureChannel();
@@ -193,3 +175,4 @@ public abstract class AbstractHandler {
 
 
 }
+
