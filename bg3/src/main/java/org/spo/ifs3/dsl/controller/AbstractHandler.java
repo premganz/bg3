@@ -131,8 +131,7 @@ public abstract class AbstractHandler {
 			
 				NavEvent navevent=new NavEvent(EventType.FORMSUBMIT,state.trxId,state.taskId,"FORMSUBMIT","");
 				NavEvent returnEvent= handleInBound(navevent, info);
-
-			
+	
 				return handleOutBound(returnEvent,request,info);
 
 			
